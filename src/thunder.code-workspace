@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../akibproject"
+		},
+		{
+			"path": "../../../xampp8.2.12/htdocs/thunder-api"
+		},
+		{
+			"path": "../../../xampp8.2.12/htdocs/wallet"
+		}
+	],
+	"settings": {}
+}
