@@ -33,12 +33,12 @@ function Services() {
   }, []);
 
   const getDatas = async (e) => {
-    let res = await axios.get(`courses/list.php`)
+    let res = await axios.get(`courses`)
     setList(res.data);
   }
 
   const getCategories = async (e) => {
-      let res = await axios.get(`categories/list.php`)
+      let res = await axios.get(`categories`)
       setCat(res.data);
   }
 
@@ -70,11 +70,12 @@ function Services() {
     }
 
     try{
-      let url='';
+       let url='';
       if(datas.id!=''){
-        url=`courses/update.php`;
+        formData.append('_method', 'PUT');
+        url=`courses/${datas.id}`;
       }else{
-        url=`courses/add.php`;
+        url=`courses`;
       }
      
       let response= await axios.post(url,formData);

@@ -17,7 +17,7 @@ function Login() {
     }
     
     try{
-      let response= await axios.post('login.php',formData);
+      let response= await axios.post('login',formData);
 
       if(response.data.jwt){
           /* if you want, user will be logged in until they logout*/

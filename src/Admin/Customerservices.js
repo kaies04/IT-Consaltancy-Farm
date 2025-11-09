@@ -17,7 +17,7 @@ function Customerservices() {
   }, []);
 
   const getDatas = async (e) => {
-    let res = await axios.get(`customerservices/list.php`)
+    let res = await axios.get(`customerservices`)
     
     setList(res.data);
   }
@@ -39,7 +39,7 @@ function Customerservices() {
     }
 
     try{
-      let url=`customerservices/update.php`;
+      let url=`customerservices`;
       
       let response= await axios.post(url,formData);
      

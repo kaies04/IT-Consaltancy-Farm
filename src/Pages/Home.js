@@ -10,7 +10,7 @@ function Home(){
     },[]);
 
     const getCourses =async (e) => {
-        let res = await axios.get(`front_api/courses.php`)
+        let res = await axios.get(`courses`)
         setCourses(res.data);
     }
 

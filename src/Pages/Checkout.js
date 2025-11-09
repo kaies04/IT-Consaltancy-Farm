@@ -26,7 +26,7 @@ function Checkout () {
         shipping_city:e.target.shipping_city.value,
         sub_total:cartTotal,
         discount:metadata.discount ?? 0,
-        grand_total:(cartTotal - metadata.discount ?? 0),
+        grand_total:cartTotal,
         cart_details:JSON.stringify(items)
       }
       const formData = new FormData();
@@ -35,7 +35,7 @@ function Checkout () {
       }
 
       try{
-          let url=`front_api/checkout.php`
+          let url=`orders`
           
           let res= await axios.post(url,formData);
           // console.log(res);
@@ -101,6 +101,7 @@ function Checkout () {
                     className="form-control"
                     id="customer_contact"
                     name="customer_contact"
+                    placeholder="Your Phone Number"
                   />
                   <span
                     className="placeholder"
@@ -113,6 +114,7 @@ function Checkout () {
                     className="form-control"
                     id="customer_email"
                     name="customer_email"
+                    placeholder="Your Email"
                   />
                   <span
                     className="placeholder"
@@ -126,6 +128,7 @@ function Checkout () {
                     className="form-control"
                     id="billing_address"
                     name="billing_address"
+                    placeholder="Your  Address"
                   />
                   <span
                     className="placeholder"
@@ -148,6 +151,7 @@ function Checkout () {
                     className="form-control"
                     id="shipping_address"
                     name="shipping_address"
+                    placeholder="shipping_address"
                   />
                   <span
                     className="placeholder"

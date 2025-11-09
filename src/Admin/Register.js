@@ -28,7 +28,7 @@ function Register() {
      
         try{
           
-          let url='register.php';
+          let url='register';
           
           let response= await axios.post(url,formData);
           if(response.data.success=1)
